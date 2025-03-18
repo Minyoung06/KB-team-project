@@ -1,0 +1,79 @@
+/* 라이트 모드 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* 배경을 화이트로 */
+  color: #000; /* 텍스트 색상을 블랙으로 */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #f8f8f8; /* 밝은 헤더 */
+  padding: 15px 0;
+  font-size: 24px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* 📌 상품 그리드 (4개 한정) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 배열 */
+  gap: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 📌 개별 상품 카드 */
+.product-card {
+  background: #f9f9f9; /* 밝은 카드 배경 */
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.product-info {
+  padding: 10px 0;
+}
+
+.product-info h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.brand {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 📌 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 태블릿에서도 2x2 유지 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 모바일에서 1열 */
+  }
+}
